@@ -33,7 +33,7 @@ svg{display:block}
 @media (max-width:760px){
   .tool{height:52px;padding:0 12px}.tool b span,.est{display:none}
   .stage{inset:52px 0 0 0;padding:0}.device,.device.mob{max-width:none;border-radius:0;border:0;height:100%}
-  .chrome,.seg{display:none}
+  .chrome,.seg:not(.pg){display:none}
 }
 /* ---------- sitio ---------- */
 .site{container-type:inline-size;background:#fff}
@@ -86,8 +86,8 @@ svg{display:block}
 .chips span{font:600 11px Inter;letter-spacing:.12em;text-transform:uppercase;padding:8px 13px;border:1px solid rgba(255,255,255,.35);border-radius:999px}
 /* beneficios */
 .bens{border-bottom:1px solid var(--ln)}
-.ben-g{display:grid;grid-template-columns:repeat(4,1fr)}
-.ben{display:flex;gap:14px;align-items:center;padding:28px 22px;border-right:1px solid var(--ln)}
+.ben-g{display:grid;grid-template-columns:repeat(5,1fr)}
+.ben{display:flex;gap:14px;align-items:center;padding:28px 18px;border-right:1px solid var(--ln)}
 .ben:last-child{border-right:0}
 .ben svg{width:30px;height:30px;color:var(--g7);flex:none}
 .ben b{display:block;font:700 13px Montserrat;text-transform:uppercase;letter-spacing:.04em}
@@ -153,10 +153,10 @@ svg{display:block}
 .why .sub{color:#C4CDBB}
 .why-g{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
 .why-l{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
-.wi{border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:22px}
-.wi svg{width:28px;height:28px;color:var(--g2)}
-.wi b{display:block;font:700 15px Montserrat;text-transform:uppercase;margin-top:14px;letter-spacing:.01em}
-.wi p{font-size:13.5px;line-height:1.55;color:#C4CDBB;margin-top:6px}
+.wi{border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:20px;display:flex;gap:14px;align-items:flex-start}
+.wi svg{width:28px;height:28px;color:var(--g2);flex:none}
+.wi b{display:block;font:700 15px Montserrat;text-transform:uppercase;letter-spacing:.01em}
+.wi p{font-size:13.5px;line-height:1.5;color:#C4CDBB;margin-top:4px}
 .why .vid{box-shadow:0 30px 70px -20px rgba(0,0,0,.6)}
 /* faq */
 .faq-g{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
@@ -195,6 +195,89 @@ svg{display:block}
 .fb{border-top:1px solid #2A2E27;margin-top:50px;padding-top:22px;display:flex;justify-content:space-between;font-size:12px;color:#8A9084}
 .wa{position:sticky;bottom:18px;margin:-70px 18px 18px auto;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 25px -8px rgba(0,0,0,.4);z-index:6}
 .wa svg{width:28px;height:28px;color:#fff}
+/* ---------- ficha de producto ---------- */
+.crumb{display:flex;gap:8px;font-size:12.5px;color:var(--mu);padding:26px 0 22px;flex-wrap:wrap}
+.crumb a{color:var(--mu);text-decoration:none}.crumb b{color:var(--ink);font-weight:500}
+.fx{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+.fx-gal{position:sticky;top:96px}
+.fx-main{position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;background:var(--cr)}
+.fx-main img,.fx-main video{width:100%;height:100%;object-fit:cover}
+.fx-th{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.fx-th button{all:unset;cursor:pointer;aspect-ratio:1;border-radius:6px;overflow:hidden;position:relative;outline:2px solid transparent;outline-offset:-2px}
+.fx-th button.on{outline-color:var(--g7)}
+.fx-th img{width:100%;height:100%;object-fit:cover}
+.fx-th .pl{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.28);color:#fff}
+.fx-th .pl svg{width:22px;height:22px}
+.fx-tags{display:flex;gap:6px;flex-wrap:wrap}
+.fx-tags span{font:700 10px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--g7);background:var(--g1);padding:5px 8px;border-radius:3px}
+.fx-info h1{font:800 32px/1.1 Montserrat;text-transform:uppercase;letter-spacing:-.02em;margin-top:14px}
+.fx-st{display:flex;align-items:center;gap:2px;color:#C8961E;margin-top:10px}
+.fx-st svg{width:15px;height:15px}
+.fx-st a{margin-left:10px;font-size:12.5px;color:var(--mu)}
+.emb{margin-top:22px;border:1px solid var(--ln);border-radius:8px;overflow:hidden}
+.emb-r{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-top:1px solid var(--ln)}
+.emb-r:first-child{border-top:0}
+.emb-r span{font:700 11px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);display:flex;align-items:center;gap:8px}
+.emb-r span em{font-style:normal;background:#fff;color:var(--g7);padding:3px 7px;border-radius:3px;letter-spacing:.06em}
+.emb-r b{font:700 20px Montserrat}
+.emb-r b.cu{font:600 14px Inter;color:var(--ink);text-align:right}
+.emb-r.best{background:var(--g7);color:#fff}
+.emb-r.best span{color:var(--g2)}
+.emb-r.best b{font-size:26px}
+.hoy{margin-top:14px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 16px;border-radius:8px;background:var(--g1);border:1px solid var(--g2)}
+.hoy-i{width:42px;height:42px;border-radius:50%;background:var(--g7);color:#fff;display:grid;place-items:center}
+.hoy-i svg{width:22px;height:22px}
+.hoy-t b{display:block;font:800 14px Montserrat;text-transform:uppercase;color:var(--g9)}
+.hoy-t span{font-size:13px;color:var(--g7);line-height:1.4;display:block;margin-top:2px}
+.hoy-c{display:flex;gap:5px}
+.hoy-c div{background:var(--g9);color:#fff;border-radius:5px;min-width:44px;padding:6px 4px;text-align:center}
+.hoy-c b{display:block;font:700 18px Montserrat;font-variant-numeric:tabular-nums;line-height:1.1}
+.hoy-c i{font-style:normal;font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+.fx-lbl{font:700 11px Inter;letter-spacing:.14em;text-transform:uppercase;margin:22px 0 10px}
+.fx-op{display:flex;gap:8px}
+.fx-op span{cursor:pointer;padding:11px 18px;border:1px solid var(--ln);border-radius:4px;font:500 14px Inter}
+.fx-op span.on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.fx-buy{display:flex;gap:10px;margin-top:20px}
+.fx-buy .btn{flex:1;height:54px;font-size:14px}
+.qty{display:flex;align-items:center;border:1px solid var(--ln);border-radius:4px}
+.qty button{all:unset;cursor:pointer;width:42px;height:52px;display:grid;place-items:center;font-size:18px}
+.qty b{min-width:22px;text-align:center;font-weight:600}
+.fx-wa{display:flex;gap:10px;align-items:center;margin-top:12px;font-size:13px;color:var(--g7);font-weight:500;text-decoration:none}
+.fx-wa svg{width:18px;height:18px;flex:none}
+.ent{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.ent div{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--ln);border-radius:8px;padding:12px}
+.ent svg{width:22px;height:22px;color:var(--g7);flex:none}
+.ent span{font-size:12px;color:var(--mu);line-height:1.4}
+.ent b{display:block;font-size:13px;color:var(--ink)}
+.gar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.gar div{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;font-size:11.5px;font-weight:500;padding:12px 6px;background:var(--cr);border-radius:8px}
+.gar svg{width:22px;height:22px;color:var(--g7)}
+.fx-nota{font-size:11.5px;color:var(--mu);margin-top:12px}
+.fx-acc{margin-top:18px;border-top:1px solid var(--ln)}
+.fx-bar{display:none}
+@container (max-width:760px){
+  .crumb{padding:16px 0 12px;font-size:11.5px}
+  .fx{grid-template-columns:1fr;gap:20px}
+  .fx-gal{position:static;margin:0 -18px}
+  .fx-main{border-radius:0}
+  .fx-th{padding:0 18px;gap:8px}
+  .fx-info h1{font-size:24px}
+  .emb-r{padding:12px 14px}.emb-r b{font-size:17px}.emb-r.best b{font-size:22px}.emb-r b.cu{font-size:12.5px}
+  .emb-r span{font-size:10px}
+  .hoy{grid-template-columns:auto 1fr;padding:12px}
+  .hoy-i{width:36px;height:36px}
+  .hoy-c{grid-column:1/-1;justify-content:stretch}
+  .hoy-c div{flex:1}
+  .fx-buy .btn{height:52px;font-size:12px;white-space:nowrap;padding:0 12px}
+  .ent{grid-template-columns:1fr}
+  .fx-bar{display:flex;position:sticky;bottom:0;z-index:7;align-items:center;justify-content:space-between;gap:12px;background:#fff;border-top:1px solid var(--ln);padding:10px 18px;box-shadow:0 -8px 24px -12px rgba(0,0,0,.25)}
+  .fx-bar small{display:block;font-size:11px;color:var(--mu)}
+  .fx-bar b{font:700 17px Montserrat;color:var(--g7)}
+  .fx-bar b i{font:500 11px Inter;font-style:normal;color:var(--mu)}
+  .fx-bar .btn{height:46px;padding:0 22px}
+  #ficha ~ .foot{margin-top:40px}
+}
+.seg.pg button{padding:7px 14px}
 /* aparición */
 .js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*90ms)}
 .js .rv.in{opacity:1;transform:none}
@@ -218,17 +301,32 @@ svg{display:block}
   .hero p{font-size:15px;margin-top:14px}
   .hero .cta{margin-top:22px}.hero .cta .btn{flex:1;padding:0 12px}
   .chips{display:none}
-  .ben-g{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
-  .ben-g::-webkit-scrollbar{display:none}
-  .ben{min-width:78%;scroll-snap-align:start;padding:20px 18px}
+  .ben-g{grid-template-columns:1fr;padding:6px 0}
+  .ben{border-right:0;border-bottom:1px solid var(--ln);padding:14px 4px}
+  .ben:last-child{border-bottom:0}
+  .ben svg{width:26px;height:26px}
   .cats{grid-template-columns:1fr 1fr;gap:10px}
   .cat b{font-size:15px}.cat div{padding:14px}
   .grid{grid-template-columns:1fr 1fr;gap:24px 12px}
   .card h3{font-size:14px}.pr b{font-size:16px}
   .head .link{display:none}
-  .ps-g,.why-g,.faq-g{grid-template-columns:1fr;gap:36px}
-  .vid{max-width:300px}
-  .why-l{grid-template-columns:1fr}
+  .faq-g{grid-template-columns:1fr;gap:36px}
+  /* texto y video lado a lado también en celular */
+  .ps-g{grid-template-columns:1fr 44%;gap:14px}
+  .why-g{grid-template-columns:42% 1fr;gap:14px;align-items:start}
+  .ps-g .h2,.why-g .h2{font-size:19px}
+  .ps-g .sub{font-size:13px;line-height:1.5;margin-top:8px}
+  .ps-g .btn{height:40px;padding:0 14px;font-size:11px;margin-top:14px}
+  .pq{font-size:10px;margin-bottom:8px}.pq:before{width:14px}
+  .vid{max-width:none;border-radius:10px}
+  .ig{font-size:10px;left:8px;top:8px;gap:5px}.ig img{width:20px;height:20px}
+  .snd{right:6px;bottom:6px;padding:6px 9px;font-size:10px}.snd span{display:none}
+  .why-l{grid-template-columns:1fr;gap:8px;margin-top:12px}
+  .wi{padding:9px 0;border:0;border-bottom:1px solid rgba(255,255,255,.12);border-radius:0;gap:9px}
+  .wi:last-child{border-bottom:0}
+  .wi svg{width:20px;height:20px}
+  .wi b{font-size:12px}
+  .wi p{font-size:11.5px;line-height:1.4;margin-top:2px}
   .tc{width:280px}
   .cta-b{grid-template-columns:1fr;padding:40px 24px}.cta-b .h2{font-size:26px}
   .map{grid-template-columns:1fr}.map-i{padding:28px 22px}.map-p{min-height:230px;order:-1}
@@ -240,7 +338,7 @@ svg{display:block}
 <body>
 <div class="tool">
   <b>PRAXIS<span>Orígenes · vista previa de tu web</span></b>
-  <div class="est"><i></i>Estructura 1</div>
+  <div class="seg pg"><button data-v="home" class="on">Inicio</button><button data-v="ficha">Producto</button></div>
   <div class="seg">
     <button data-m="pc" class="on"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>PC</button>
     <button data-m="mob"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>Celular</button>
@@ -273,6 +371,7 @@ svg{display:block}
     </div>
   </div></header>
 
+  <div id="home">
   <!-- 3 · Banner con video -->
   <section class="hero" id="top">
     <div class="bgv"><img class="poster" src="hero.jpg" alt=""><video class="av" src="hero.mp4" poster="hero.jpg" muted loop playsinline preload="metadata"></video></div>
@@ -295,7 +394,8 @@ svg{display:block}
     <div class="ben rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c-2 3-2 5 0 8 2-3 2-5 0-8zM12 11v10M7 8c0 3 2 5 5 5M17 8c0 3-2 5-5 5M7 14c0 3 2 5 5 5M17 14c0 3-2 5-5 5"/><path d="M3 3l18 18"/></svg><div><b>Sin harina</b><span>A base de almendras real</span></div></div>
     <div class="ben rv" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9z"/><path d="M3 3l18 18"/></svg><div><b>Sin azúcar</b><span>Endulzado sin culpa</span></div></div>
     <div class="ben rv" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><div><b>Keto y low carb</b><span>Opciones para diabéticos</span></div></div>
-    <div class="ben rv" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><div><b>Delivery o retiro</b><span>En la ciudad o en el local</span></div></div>
+    <div class="ben rv" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg><div><b>Envío en el día</b><span>Pedí antes de las 21 h</span></div></div>
+    <div class="ben rv" style="--i:4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/></svg><div><b>Retiro en el local</b><span>Calle 14 N.º 729, Sáenz Peña</span></div></div>
   </div></div></section>
 
   <!-- 5 · Categorías con video -->
@@ -320,13 +420,8 @@ svg{display:block}
   <section class="sec ps" id="ps"><div class="wrap ps-g">
     <div class="rv">
       <div class="pq">El problema</div>
-      <div class="h2">Lo «saludable» con gusto a <em>cartón</em>, se terminó.</div>
-      <p class="sub">Productos secos, que prometen ser keto y te dejan la panza inflada a los diez minutos. En Orígenes decidimos hacer las cosas de otra manera: no hacemos pastelería saludable común, hacemos pastelería alternativa real.</p>
-      <ul class="ps-l">
-        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg></i><div><b>Harina de almendras pura</b> <span>— sin harina camuflada ni rellenos baratos.</span></div></li>
-        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg></i><div><b>Sin azúcar y sin conservantes</b> <span>— alimento real, no golosina.</span></div></li>
-        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg></i><div><b>Textura y sabor de pastelería</b> <span>— húmedo, cremoso, como tiene que ser.</span></div></li>
-      </ul>
+      <div class="h2">Se acabó lo saludable con gusto a <em>cartón</em>.</div>
+      <p class="sub">Nada de productos secos que te inflan la panza. Hacemos pastelería alternativa real: rica, húmeda y hecha con ingredientes de verdad.</p>
       <a class="btn" href="#prods">Probá Orígenes</a>
     </div>
     <div class="vid rv" style="--i:2">
@@ -357,12 +452,12 @@ svg{display:block}
       <button class="snd" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9v6h4l5 4V5L8 9z"/><path class="x" d="m17 9 4 6M21 9l-4 6"/></svg><span>Activar sonido</span></button>
     </div>
     <div>
-      <div class="rv"><div class="kick">Por qué elegirnos</div><div class="h2">La química <em>no miente</em>.</div><p class="sub">Pusimos a prueba una harina de almendras «pura» de dietética: con yodo se volvió negra al instante, porque tenía almidón. La nuestra no. Esa es la diferencia que vas a sentir en cada bocado.</p></div>
+      <div class="rv"><div class="kick">Por qué elegirnos</div><div class="h2">La química <em>no miente</em>.</div></div>
       <div class="why-l">
-        <div class="wi rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/></svg><b>Ingredientes probados</b><p>Almendra de verdad, sin almidones ni rellenos.</p></div>
-        <div class="wi rv" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6z"/><path d="M6 17h12"/></svg><b>Hecho en nuestra cocina</b><p>Cada tarta y cada alfajor, armado a mano por nuestra chef.</p></div>
-        <div class="wi rv" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><b>Para todos</b><p>Keto, low carb y opciones para diabéticos, sin resignar sabor.</p></div>
-        <div class="wi rv" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/></svg><b>Local propio</b><p>Pasá a conocernos o pedí por delivery en la ciudad.</p></div>
+        <div class="wi rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/></svg><div><b>Probado con yodo</b><p>La harina «pura» de dietética se puso negra. La nuestra no.</p></div></div>
+        <div class="wi rv" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5-6"/></svg><div><b>100 % almendra</b><p>Sin almidón camuflado ni rellenos baratos.</p></div></div>
+        <div class="wi rv" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><div><b>Apto keto</b><p>Low carb y opciones para diabéticos.</p></div></div>
+        <div class="wi rv" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6z"/><path d="M6 17h12"/></svg><div><b>Hecho a mano</b><p>Por nuestra chef, en nuestra cocina.</p></div></div>
       </div>
     </div>
   </div></section>
@@ -371,15 +466,6 @@ svg{display:block}
   <section class="sec" id="faq"><div class="wrap faq-g">
     <div class="rv"><div class="kick">Ayuda</div><div class="h2">Preguntas <em>frecuentes</em></div><p class="sub">Si te queda alguna duda, escribinos por WhatsApp y te respondemos.</p></div>
     <div class="rv" style="--i:1" id="fq"></div>
-  </div></section>
-
-  <!-- 12 · Llamado a la acción -->
-  <section class="sec" style="padding-top:0"><div class="wrap">
-    <div class="cta-b rv">
-      <svg class="leaf" viewBox="0 0 24 24" fill="#fff"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/></svg>
-      <div><div class="kick">Elegí Orígenes</div><div class="h2">Elegí saludable, elegí consciente.</div><p class="sub">Hacé tu pedido online o encargá tu torta por WhatsApp. Te lo llevamos o lo pasás a buscar.</p></div>
-      <div class="btns"><a class="btn w" href="#prods">Hacer mi pedido</a><a class="btn o" href="#top">Encargar por WhatsApp</a></div>
-    </div>
   </div></section>
 
   <!-- 13 · Local -->
@@ -395,6 +481,76 @@ svg{display:block}
       <div class="map-p"><img src="local.jpg" alt="Local de Orígenes"></div>
     </div>
   </div></section>
+
+  <!-- 12 · Llamado a la acción -->
+  <section class="sec" style="padding-bottom:0;padding-top:40px"><div class="wrap">
+    <div class="cta-b rv">
+      <svg class="leaf" viewBox="0 0 24 24" fill="#fff"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/></svg>
+      <div><div class="kick">Elegí Orígenes</div><div class="h2">Elegí saludable, elegí consciente.</div><p class="sub">Hacé tu pedido online o encargá tu torta por WhatsApp. Te lo llevamos o lo pasás a buscar.</p></div>
+      <div class="btns"><a class="btn w" href="#prods">Hacer mi pedido</a><a class="btn o" href="#top">Encargar por WhatsApp</a></div>
+    </div>
+  </div></section>
+
+  </div><!-- /home -->
+
+  <!-- FICHA DE PRODUCTO -->
+  <main id="ficha" hidden>
+    <div class="wrap">
+      <div class="crumb"><a href="#inicio" data-go="home">Inicio</a><span>/</span><a href="#inicio" data-go="home">Pastelería</a><span>/</span><b id="fxName2">Tarta de frutillas</b></div>
+      <div class="fx">
+        <div class="fx-gal">
+          <div class="fx-main"><img id="fxImg" src="p-tarta.jpg" alt=""><span class="tag">Sin harina</span></div>
+          <div class="fx-th" id="fxTh"></div>
+        </div>
+        <div class="fx-info">
+          <div class="fx-tags"><span>Sin harina</span><span>Sin azúcar</span><span>Keto</span></div>
+          <h1 id="fxName">Tarta de frutillas</h1>
+          <div class="fx-st"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.5 7L12 17.5 5.8 21l1.5-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.5 7L12 17.5 5.8 21l1.5-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.5 7L12 17.5 5.8 21l1.5-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.5 7L12 17.5 5.8 21l1.5-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.5 7L12 17.5 5.8 21l1.5-7L2 9.3l7-.7z"/></svg><a href="#tst" data-go="home">Ver opiniones</a></div>
+
+          <div class="emb">
+            <div class="emb-r"><span>Precio</span><b id="fxP">$18.000</b></div>
+            <div class="emb-r best"><span>Con transferencia<em>10 % OFF</em></span><b id="fxT">$16.200</b></div>
+            <div class="emb-r"><span>En cuotas</span><b class="cu" id="fxC">3 cuotas sin interés de $6.000</b></div>
+          </div>
+
+          <div class="hoy" id="hoy">
+            <div class="hoy-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div>
+            <div class="hoy-t"><b id="hoyT">Envío en el día</b><span id="hoyS">Comprando antes de las 21:00 h, te llega hoy</span></div>
+            <div class="hoy-c" id="hoyC"><div><b>00</b><i>h</i></div><div><b>00</b><i>min</i></div><div><b>00</b><i>seg</i></div></div>
+          </div>
+
+          <div class="fx-lbl">Tamaño</div>
+          <div class="fx-op" id="fxOp"><span class="on">Porción</span><span>Entera</span></div>
+
+          <div class="fx-buy">
+            <div class="qty"><button type="button" data-q="-1">−</button><b id="qty">1</b><button type="button" data-q="1">+</button></div>
+            <a class="btn" href="#ficha" id="fxAdd">Agregar al carrito</a>
+          </div>
+          <a class="fx-wa" href="#ficha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg>¿Querés una torta entera o un pedido especial? Encargalo por WhatsApp</a>
+
+          <div class="ent">
+            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span><b>Delivery en la ciudad</b>Sáenz Peña, en el día</span></div>
+            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/></svg><span><b>Retiro en el local</b>Calle 14 N.º 729 · sin cargo</span></div>
+          </div>
+          <div class="gar">
+            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/></svg>Sin harina ni azúcar</div>
+            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6z"/></svg>Hecho a mano</div>
+            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Compra protegida</div>
+          </div>
+          <p class="fx-nota">Precios de ejemplo: el precio, la transferencia y las cuotas salen de tu Tiendanube.</p>
+
+          <div class="fx-acc">
+            <details class="fq" open><summary>Descripción<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></summary><p id="fxD">A base de almendras, sin harina y sin azúcar. Hecha a mano en nuestra cocina.</p></details>
+            <details class="fq"><summary>Envíos y retiro<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></summary><p>Comprando antes de las 21:00 h te llega en el día por delivery en la ciudad. También podés retirarlo sin cargo por el local, en calle 14 N.º 729.</p></details>
+            <details class="fq"><summary>Medios de pago<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></summary><p>Transferencia con el mejor precio, tarjetas en cuotas y Mercado Pago.</p></details>
+          </div>
+        </div>
+      </div>
+      <div class="head" style="margin-top:70px"><div><div class="kick">Combinalo con</div><div class="h2">También te puede <em>gustar</em></div></div></div>
+      <div class="grid" id="g3"></div>
+    </div>
+    <div class="fx-bar"><div><small id="fxBarN">Tarta de frutillas</small><b id="fxBarT">$16.200 <i>con transferencia</i></b></div><a class="btn" href="#ficha">Agregar</a></div>
+  </main>
 
   <!-- 14 · Pie -->
   <footer class="foot"><div class="wrap">
@@ -414,7 +570,7 @@ svg{display:block}
 
 <script>
 document.documentElement.classList.add('js');
-const P=[
+const P0=[
  ['p-tarta.jpg','Tarta de frutillas','A base de almendras'],
  ['p-tchoco.jpg','Tarta de chocolate','Chocolate sin azúcar'],
  ['p-alfa.jpg','Alfajor de almendras','Dulce de leche sin azúcar'],
@@ -423,9 +579,11 @@ const P=[
  ['p-yog.jpg','Yogurt + granola keto','Desayuno o merienda'],
  ['p-sand.jpg','Sándwich keto de jamón y queso','Hiperproteico, sin harina'],
  ['p-mix.jpg','Tartas en porciones','Elegí tus sabores']];
-const card=(p,i,off)=>`<a class="card rv" style="--i:${i%4}" href="#prods"><div class="ph"><img src="${p[0]}" alt="${p[1]}" loading="lazy">${off?'<span class="tag off">-00%</span>':(i<2?'<span class="tag">Sin harina</span>':'')}</div><h3>${p[1]}</h3><div class="lb">${p[2]}</div><div class="pr"><b>$00.000${off?'<s>$00.000</s>':''}</b><span class="tr">$00.000 con transferencia</span><span class="cu">3 cuotas sin interés de $0.000</span></div></a>`;
+const card=(p,i,off)=>`<a class="card rv" style="--i:${i%4}" href="#producto" data-p="${p[3]??i}"><div class="ph"><img src="${p[0]}" alt="${p[1]}">${off?'<span class="tag off">-00%</span>':(i<2?'<span class="tag">Sin harina</span>':'')}</div><h3>${p[1]}</h3><div class="lb">${p[2]}</div><div class="pr"><b>$00.000${off?'<s>$00.000</s>':''}</b><span class="tr">$00.000 con transferencia</span><span class="cu">3 cuotas sin interés de $0.000</span></div></a>`;
+const P=P0.map((p,i)=>[...p,i]);
 document.getElementById('g1').innerHTML=P.map((p,i)=>card(p,i)).join('');
-document.getElementById('g2').innerHTML=[P[7],P[2],P[4],P[0]].map((p,i)=>card([p[0],(i==1?'Pack x6 · ':i==3?'Combo · ':'')+p[1],p[2]],i,1)).join('');
+document.getElementById('g2').innerHTML=[P[7],P[2],P[4],P[0]].map((p,i)=>card([p[0],(i==1?'Pack x6 · ':i==3?'Combo · ':'')+p[1],p[2],p[3]],i,1)).join('');
+document.getElementById('g3').innerHTML=[P[2],P[3],P[4],P[5]].map((p,i)=>card(p,i)).join('');
 const star='<svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.5 7L12 17.5 5.8 21l1.5-7L2 9.3l7-.7z"/></svg>';
 const T=Array.from({length:6},(_,i)=>`<div class="tc"><div class="st">${star.repeat(5)}</div><p>Opinión real de tu cliente</p><div class="ln" style="width:${92-i*6}%"></div><div class="ln" style="width:${70+i*4}%"></div><div class="who"><i></i><div>Nombre del cliente<small>Compró en Orígenes</small></div></div></div>`).join('');
 document.getElementById('mt').innerHTML=T+T;
@@ -444,11 +602,51 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)document.qu
 addEventListener('pagehide',()=>document.querySelectorAll('video').forEach(v=>{v.pause();silenciar(v)}));
 // sonido
 document.querySelectorAll('.snd').forEach(b=>b.addEventListener('click',()=>{const v=b.parentElement.querySelector('video');document.querySelectorAll('.snd-v').forEach(o=>{if(o!==v){o.muted=true;o.parentElement.querySelector('.snd span').textContent='Activar sonido'}});v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play()}b.querySelector('span').textContent=v.muted?'Activar sonido':'Silenciar'}));
+
+// ---------- ficha ----------
+const PR=[18000,21000,4500,5200,4800,5500,6500,24000];
+const DS=['Tarta a base de almendras, con crema y frutillas frescas. Sin harina y sin azúcar.','Tarta a base de almendras con chocolate sin azúcar. Sin harina.','Alfajor a base de almendras, con dulce de leche sin azúcar. Alimento, no golosina.','Brownie húmedo sin harina, con chocolate sin azúcar.','Avena amanecida con leche de almendras. Sabores: cacao y café, o vainilla con frutos rojos.','Yogurt natural con granola keto: desayuno, merienda o para cualquier momento.','Sándwich keto de jamón y queso, hiperproteico y sin harina.','Porciones de nuestras tartas para elegir tus sabores.'];
+const GAL=[['p-tarta.jpg','p-mix.jpg','c-past.mp4'],['p-tchoco.jpg','p-mix.jpg','hero.mp4'],['p-alfa.jpg','c-alfa.jpg','c-alfa.mp4'],['p-brownie.jpg','ps.jpg','ps.mp4'],['p-avena.jpg','p-yog.jpg','c-desa.mp4'],['p-yog.jpg','p-avena.jpg','c-desa.mp4'],['p-sand.jpg','c-sal.jpg','c-sal.mp4'],['p-mix.jpg','p-tarta.jpg','c-past.mp4']];
+const $=id=>document.getElementById(id), fm=n=>'$'+n.toLocaleString('es-AR');
+const play='<span class="pl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg></span>';
+function verMedia(src){const m=document.querySelector('.fx-main');const old=m.querySelector('img,video');let el;
+  if(src.endsWith('.mp4')){el=document.createElement('video');el.src=src;el.poster=src.replace('.mp4','.jpg');el.muted=true;el.loop=true;el.playsInline=true;el.autoplay=true;el.className='av';}
+  else{el=document.createElement('img');el.src=src;el.alt='';}
+  old.replaceWith(el);if(el.tagName==='VIDEO'){el.play().catch(()=>{})}}
+function abrir(i){const p=P[i]||P[0],pr=PR[i]??18000;
+  $('fxName').textContent=$('fxName2').textContent=$('fxBarN').textContent=p[1];
+  $('fxP').textContent=fm(pr);$('fxT').textContent=fm(Math.round(pr*.9));$('fxC').textContent='3 cuotas sin interés de '+fm(Math.round(pr/3));
+  $('fxBarT').innerHTML=fm(Math.round(pr*.9))+' <i>con transferencia</i>';$('fxD').textContent=DS[i]||DS[0];
+  const g=GAL[i]||GAL[0];
+  $('fxTh').innerHTML=g.map((s,k)=>`<button type="button" class="${k?'':'on'}" data-src="${s}"><img src="${s.endsWith('.mp4')?s.replace('.mp4','.jpg'):s}" alt="">${s.endsWith('.mp4')?play:''}</button>`).join('');
+  verMedia(g[0]);$('qty').textContent=1;}
+function vista(v,i){const f=v==='ficha';$('home').hidden=f;$('ficha').hidden=!f;
+  document.querySelectorAll('.seg.pg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  if(f)abrir(i??0);
+  document.querySelectorAll(f?'#home video':'#ficha video').forEach(x=>{x.pause();x.muted=true});
+  document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+  $('screen').scrollTop=0;window.scrollTo(0,0);}
+document.addEventListener('click',e=>{
+  const c=e.target.closest('a.card');if(c){e.preventDefault();vista('ficha',+c.dataset.p);return}
+  const g=e.target.closest('[data-go="home"]');if(g){e.preventDefault();vista('home');return}
+  const t=e.target.closest('.fx-th button');if(t){document.querySelectorAll('.fx-th button').forEach(b=>b.classList.toggle('on',b===t));verMedia(t.dataset.src);return}
+  const o=e.target.closest('.fx-op span');if(o){document.querySelectorAll('.fx-op span').forEach(b=>b.classList.toggle('on',b===o));return}
+  const q=e.target.closest('[data-q]');if(q){$('qty').textContent=Math.max(1,+$('qty').textContent+ +q.dataset.q);return}
+  if(e.target.closest('#ficha a[href="#ficha"]'))e.preventDefault();
+});
+document.querySelectorAll('.seg.pg button').forEach(b=>b.addEventListener('click',()=>vista(b.dataset.v)));
+// contador: envío en el día hasta las 21:00
+function reloj(){const n=new Date(),c=new Date(n);c.setHours(21,0,0,0);const hoy=n<c;if(!hoy)c.setDate(c.getDate()+1);
+  let r=Math.max(0,Math.floor((c-n)/1000));const h=Math.floor(r/3600),m=Math.floor(r%3600/60),s=r%60;
+  const bs=document.querySelectorAll('#hoyC b');[h,m,s].forEach((v,k)=>bs[k].textContent=String(v).padStart(2,'0'));
+  $('hoyT').textContent=hoy?'Envío en el día':'Te llega mañana';
+  $('hoyS').textContent=hoy?'Comprando antes de las 21:00 h, te llega hoy':'Pasadas las 21:00 h: comprando ahora, te llega mañana';}
+reloj();setInterval(reloj,1000);
 // PC / celular
 const dev=document.getElementById('device');
-document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x===b));dev.classList.toggle('mob',b.dataset.m==='mob');document.getElementById('screen').scrollTop=0}));
-if(location.hash==='#celular')document.querySelector('[data-m=mob]').click();
-document.addEventListener('keydown',e=>{if(e.key==='m'||e.key==='M')document.querySelector('.seg button:not(.on)').click()});
+document.querySelectorAll('.seg:not(.pg) button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.seg:not(.pg) button').forEach(x=>x.classList.toggle('on',x===b));dev.classList.toggle('mob',b.dataset.m==='mob');document.getElementById('screen').scrollTop=0}));
+const H=location.hash;if(H.includes('celular'))document.querySelector('[data-m=mob]').click();if(H.includes('producto'))vista('ficha',0);
+document.addEventListener('keydown',e=>{if(e.key==='m'||e.key==='M')document.querySelector('.seg:not(.pg) button:not(.on)').click()});
 </script>
 </body>
 </html>
